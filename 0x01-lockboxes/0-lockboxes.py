@@ -1,7 +1,9 @@
+#!/usr/bin/python3
 """Determines whether all locked boxes can be opened"""
 
 
 def canUnlockAll(boxes):
+    """required method"""
     unlocked = [0]
     for id, box in enumerate(boxes):
         if not box:
