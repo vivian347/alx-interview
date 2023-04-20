@@ -28,9 +28,11 @@ def validUTF8(data):
                 return False
             num_bytes -= 1
 
-        # The data set is not a valid UTF-8 encoding if there are too many bytes for the character
+        # The data set is not a valid UTF-8
+        #  encoding if there are too many bytes for the character
         if num_bytes < 0:
             return False
 
-    # The data set is not a valid UTF-8 encoding if there are still bytes needed to complete the last character
+    # The data set is not a valid UTF-8 encoding
+    #  if there are still bytes needed to complete the last character
     return num_bytes == 0
