@@ -3,8 +3,9 @@
 
 
 def isWinner(x, nums):
+    """Checks for winner"""
     def is_prime(num):
-        # Function to check if a number is prime
+        """ Function to check if a number is prime """
         if num < 2:
             return False
         for i in range(2, int(num ** 0.5) + 1):
@@ -13,7 +14,7 @@ def isWinner(x, nums):
         return True
 
     def get_primes(n):
-        # Function to get a list of prime numbers up to n
+        """ Function to get a list of prime numbers up to n """
         primes = []
         for num in range(2, n + 1):
             if is_prime(num):
@@ -21,7 +22,7 @@ def isWinner(x, nums):
         return primes
 
     def can_win(num):
-        # Function to determine if a player can win the game for a given number
+        """Function to determine if a player can win the game for a given number"""
         primes = get_primes(num)
         # If the number of primes is even, the second player wins. Otherwise, the first player wins.
         return len(primes) % 2 == 0
